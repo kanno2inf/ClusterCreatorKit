@@ -15,7 +15,7 @@ namespace ClusterVR.CreatorKit.Preview.PlayerController
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 var delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-                delta *= 0.002f * Mathf.Pow(4f, CameraControlSettings.Sensitivity);
+                delta *= 0.002f * 4f * CameraControlSettings.Sensitivity;
                 if (CameraControlSettings.InvertHorizontal) delta.x = -delta.x;
                 if (CameraControlSettings.InvertVertical) delta.y = -delta.y;
                 OnMoved?.Invoke(delta);

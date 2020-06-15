@@ -28,7 +28,7 @@ namespace ClusterVR.CreatorKit.Editor.Preview.EditorUI
 
             var sensitivitySlider = EditorUIGenerator.GenerateSlider(LabelType.h2, "感度");
             sensitivitySlider.lowValue = 0f;
-            sensitivitySlider.highValue = 1f;
+            sensitivitySlider.highValue = 3000f;
             sensitivitySlider.value = CameraControlSettings.Sensitivity;
             sensitivitySlider.RegisterValueChangedCallback(ev => CameraControlSettings.Sensitivity = ev.newValue);
             cameraControlSection.Add(sensitivitySlider);
